@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>Slick Images Carousel for Joomla 3.x</name>
+    <author>j.s. Negley</author>
+    <creationDate>2014 NOV 17</creationDate>
+    <copyright>J.S. Negley LLC</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorUrl>http://www.jsnegley.net</authorUrl>
+    <version>1.1.0</version>
+    <description>MOD_SLICK_CAROUSEL_IMAGES_XML_DESCRIPTION</description>
+    <files>
+		<filename module="mod_slick_carousel_images">mod_slick_carousel_images.php</filename>
+        <filename>mod_slick_carousel_images.xml</filename>
+        <filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+    </files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_slick_carousel_images.ini</language>
+		<language tag="en-GB">language/en-GB.mod_slick_carousel_images.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+				<field name="imgfolder" type="folderlist" default="" directory="images" label="MOD_SLICK_CAROUSEL_IMAGES_IMGFOLDER_LABEL"  />
+				<field name="subfolders" type="list" default="0" label="MOD_SLICK_CAROUSEL_IMAGES_INCSUBFOLDERS_LABEL" description="MOD_SLICK_CAROUSEL_IMAGES_INCSUBFOLDERS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="links" type="textarea" cols="60" default="" label="MOD_SLICK_CAROUSEL_IMAGES_LINKS_LABEL" description="MOD_SLICK_CAROUSEL_IMAGES_LINKS_DESC" />
+				<field name="repeat" type="radio" default="0" label="MOD_SLICK_CAROUSEL_IMAGES_LINKS_REPEAT_LABEL">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="target" type="list" default="0" label="MOD_SLICK_CAROUSEL_IMAGES_LINKS_TARGET_LABEL">
+					<option value="0">Parent Window (self)</option>
+					<option value="1">New Window (blank)</option>
+				</field>
+				<field name="alttags" type="textarea" cols="60" default="" label="MOD_SLICK_CAROUSEL_IMAGES_ALT_TAGS_LABEL" description="MOD_SLICK_CAROUSEL_IMAGES_ALT_TAGS_DESC" />
+			</fieldset>
+
+			<fieldset name="SETTINGS">
+				<field name="speed" type="text" default="3000"
+					label="MOD_SLICK_CAROUSEL_IMAGES_SPEED_LABEL" />
+
+				<field name="autoplay" type="radio" default="1" class="btn-group"
+					label="MOD_SLICK_CAROUSEL_IMAGES_AUTOPLAY_LABEL"
+					description="MOD_SLICK_CAROUSEL_IMAGES_AUTOPLAY_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="autoplayspeed" type="text" default="3000"
+					label="MOD_SLICK_CAROUSEL_IMAGES_AUTOPLAYSPEED_LABEL" />
+
+				<field name="arrows" type="list" default="1" class="btn-group"
+					label="MOD_SLICK_CAROUSEL_IMAGES_ARROWS_LABEL" 
+					description="MOD_SLICK_CAROUSEL_IMAGES_ARROWS_DESC">
+					<option value="0">MOD_SLICK_CAROUSEL_IMAGES_ARROWS_NONE</option>
+					<option value="1">MOD_SLICK_CAROUSEL_IMAGES_ARROWS_DEFAULT</option>
+					<option value="2">MOD_SLICK_CAROUSEL_IMAGES_ARROWS_GLYPHICON</option>
+					<option value="3">MOD_SLICK_CAROUSEL_IMAGES_ARROWS_FONTAWESOME</option>
+				</field>
+
+
+				<field name="prevarrow" type="text" default=""
+					label="MOD_SLICK_CAROUSEL_IMAGES_PREVARROW_LABEL"
+					description="MOD_SLICK_CAROUSEL_IMAGES_PREVARROW_DESC" />
+				<field name="nextarrow" type="text" default=""
+					label="MOD_SLICK_CAROUSEL_IMAGES_NEXTARROW_LABEL"
+					description="MOD_SLICK_CAROUSEL_IMAGES_NEXTARROW_DESC" />
+
+				<field name="dots" type="radio" default="0" class="btn-group"
+					label="MOD_SLICK_CAROUSEL_IMAGES_DOTS_LABEL"
+					description="MOD_SLICK_CAROUSEL_IMAGES_DOTS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+        </fields>
+    </config>
+</extension>
